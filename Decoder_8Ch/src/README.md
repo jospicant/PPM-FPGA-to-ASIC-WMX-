@@ -4,4 +4,3 @@
 * **verilog**. Contiene los ficheros creados de la exportación desde Icestudio y corrección del fichero exportado ( eliminado de puertos "vinit" que crea )  
                y cambio del nombre del módulo 
 
----
