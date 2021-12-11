@@ -4,19 +4,19 @@
 `default_nettype none
 
 //---- Top entity
-module main (
- input v35fe10,
- input v85e55a,
- input v357ff7,
- output v980ce1,
- output v5ad277,
- output v9c8ff5,
- output v755ffa,
- output v9653af,
- output vc74257,
- output vd84530,
- output va741a7
- //output [0:7] vinit   // Delete all Lines "vinit"
+module DecoderPPM8 (    // cambio  el nombre main por DecoderPPM8
+ input v35fe10,         // PPM_in_neg. entrada de pulsos PPM invertidos
+ input v85e55a,         // reset
+ input v357ff7,         // clk   a  12 MHz (Alhambra II)
+ output v980ce1,        // CH1   Salida del canal1
+ output v5ad277,        // CH2   Salida del canal2
+ output v9c8ff5,        // CH3   Salida del canal3
+ output v755ffa,        // CH4   Salida del canal4
+ output v9653af,        // CH5   Salida del canal5
+ output vc74257,        // CH6   Salida del canal6
+ output vd84530,        // CH7   Salida del canal7
+ output va741a7         // CH8   Salida del canal8
+  //output [0:7] vinit   // Delete all Lines "vinit"
 );
  wire w0;
  wire w1;
