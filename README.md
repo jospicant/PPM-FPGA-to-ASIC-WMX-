@@ -1,4 +1,4 @@
-# PPM-FPGA-to-ASIC-WMX  
+# PPM 8Ch-FPGA-to-ASIC-WMX  
 
 * Creación **Codificador/Decodificador PPM**  en FPGA para llevarlo a un ASIC.  
  
