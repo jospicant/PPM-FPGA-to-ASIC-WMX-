@@ -31,25 +31,6 @@
           }
         },
         {
-          "id": "58f62976-ad23-4ab2-9724-be8fc52fa09c",
-          "type": "basic.output",
-          "data": {
-            "name": "CH2",
-            "pins": [
-              {
-                "index": "0",
-                "name": "NULL",
-                "value": "NULL"
-              }
-            ],
-            "virtual": true
-          },
-          "position": {
-            "x": 1216,
-            "y": 224
-          }
-        },
-        {
           "id": "9f8cc3b6-b07c-4ba4-9bb4-84f5d061bea9",
           "type": "basic.input",
           "data": {
@@ -66,7 +47,26 @@
           },
           "position": {
             "x": 248,
-            "y": 256
+            "y": 216
+          }
+        },
+        {
+          "id": "58f62976-ad23-4ab2-9724-be8fc52fa09c",
+          "type": "basic.output",
+          "data": {
+            "name": "CH2",
+            "pins": [
+              {
+                "index": "0",
+                "name": "NULL",
+                "value": "NULL"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1216,
+            "y": 224
           }
         },
         {
@@ -108,6 +108,26 @@
           }
         },
         {
+          "id": "1aa2b9f9-cac1-41ff-b5e5-67c637660f04",
+          "type": "basic.input",
+          "data": {
+            "name": "reset",
+            "pins": [
+              {
+                "index": "0",
+                "name": "NULL",
+                "value": "NULL"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 256,
+            "y": 360
+          }
+        },
+        {
           "id": "99c1bd02-be57-4bce-a3cb-94cca8c7ba51",
           "type": "basic.output",
           "data": {
@@ -146,26 +166,6 @@
           }
         },
         {
-          "id": "b6940930-c864-4085-a7b0-63da46d7347e",
-          "type": "basic.input",
-          "data": {
-            "name": "clk",
-            "pins": [
-              {
-                "index": "0",
-                "name": "NULL",
-                "value": "NULL"
-              }
-            ],
-            "virtual": true,
-            "clock": true
-          },
-          "position": {
-            "x": 248,
-            "y": 472
-          }
-        },
-        {
           "id": "f7e0a214-6cc5-4a99-95fb-c19f21a29be5",
           "type": "basic.output",
           "data": {
@@ -182,6 +182,26 @@
           "position": {
             "x": 1216,
             "y": 496
+          }
+        },
+        {
+          "id": "b6940930-c864-4085-a7b0-63da46d7347e",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "NULL",
+                "value": "NULL"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 256,
+            "y": 504
           }
         },
         {
@@ -207,12 +227,15 @@
           "id": "ae98e112-e163-4288-968b-004899d59b7e",
           "type": "basic.code",
           "data": {
-            "code": "\n//@include Module_Decoder_8bits_ASIC_.v\n\nppm8Ch MiPPM_8(.v35fe10(PPM_inv), .v357ff7(clk),\n               .v980ce1(Ch1), .v5ad277(Ch2), .v9c8ff5(Ch3),\n               .v755ffa(Ch4), .v9653af(Ch5), .vc74257(Ch6),\n               .vd84530(Ch7), .va741a7(Ch8));\n               ",
+            "code": "\n//@include Module_Decoder_8bits_ASIC.v\n\nDecoderPPM8 MyDecoderPPM_8(.v35fe10(PPM_inv),.v85e55a(reset), .v357ff7(clk),\n               .v980ce1(Ch1), .v5ad277(Ch2), .v9c8ff5(Ch3),\n               .v755ffa(Ch4), .v9653af(Ch5), .vc74257(Ch6),\n               .vd84530(Ch7), .va741a7(Ch8));\n               ",
             "params": [],
             "ports": {
               "in": [
                 {
                   "name": "PPM_inv"
+                },
+                {
+                  "name": "reset"
                 },
                 {
                   "name": "clk"
@@ -355,6 +378,16 @@
           "target": {
             "block": "ae98e112-e163-4288-968b-004899d59b7e",
             "port": "clk"
+          }
+        },
+        {
+          "source": {
+            "block": "1aa2b9f9-cac1-41ff-b5e5-67c637660f04",
+            "port": "out"
+          },
+          "target": {
+            "block": "ae98e112-e163-4288-968b-004899d59b7e",
+            "port": "reset"
           }
         }
       ]
