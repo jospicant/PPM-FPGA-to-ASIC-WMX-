@@ -24,5 +24,5 @@
  
  ---
  
- * **Prueba_Importar_Modulo_a_Icestudio**. Carpeta donde se importa mediante la directiva **@include** el módulo verilog exportado y retocado parfa comprobar la correcta exportación y funcionamiento del módulo verilog exportado ( y modificado).
+ * **Prueba_Importar_Modulo_a_Icestudio**. Carpeta donde se importa mediante la directiva **@include** el módulo verilog exportado y retocado para comprobar la correcta exportación y funcionamiento del módulo verilog exportado ( y modificado).
  
