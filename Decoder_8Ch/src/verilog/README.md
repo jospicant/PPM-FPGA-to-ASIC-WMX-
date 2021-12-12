@@ -6,7 +6,7 @@
 
 ---
 
-**module DecoderPPM8 ( **     
+**module DecoderPPM8(**     
 
  **input** v35fe10,         // **PPM_in_neg**. entrada de pulsos PPM invertidos  
  **input** v85e55a,         // **reset**  
