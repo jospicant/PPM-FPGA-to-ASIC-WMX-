@@ -9,7 +9,7 @@
 `default_nettype none
 
 //---- Top entity
-module ppmCoder4_8 (   //cambio main por   ppmCoder4_8
+module ppmCoder4_8 (   
  input v16dfc8,        // clk. reloj del sistema (12 Mhz Alhambra II )
  input v7d096c,        // b_0. bit 0 ADC externo (LSB)
  input v0c9cd1,        // b_1. bit 1 
