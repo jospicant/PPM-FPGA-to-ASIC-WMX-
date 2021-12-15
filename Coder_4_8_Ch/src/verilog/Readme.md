@@ -1,7 +1,7 @@
 
 ## Mapeo de señales con el módulo PPM
 
-
+~~~
 //---- Top entity
 
 **module ppmCoder4_8 (**   //cambio main por   ppmCoder4_8  
@@ -29,3 +29,4 @@
 **output v1f8e7b,**       //**Sel_1**  
 **output v7cb71c **       //**Sel_2**  [Sel_0 a Sel_2] selección del canal de entrada en el ADC   
 );  
+~~~
