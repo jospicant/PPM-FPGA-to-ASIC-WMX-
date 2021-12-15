@@ -1,6 +1,6 @@
 # PPM-FPGA-to-ASIC-WMX  
 
-* **Module_Decoder_8bits_ASIC.v**. Fichero verilog que contiene el módulo a implementar en ASIC.
+* **Module_Decoder_8Ch_ASIC.v**. Fichero verilog que contiene el módulo a implementar en ASIC.
 
 * El módulo resultante y su mapeo con los pines es:
 
